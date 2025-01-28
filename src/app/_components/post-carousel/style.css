@@ -12,6 +12,7 @@
 .embla__slide {
   flex: 0 0 80%;
   width: 80%;
+  max-width: 80rem;
   height: calc(100% - 40px);
   margin: 0 8px;
   padding: 20px 20% 20px 20px;
