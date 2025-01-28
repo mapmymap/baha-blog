@@ -1,7 +1,7 @@
-import React from 'react'
-import Container from '@/app/_components/container'
-import SocialLinks from '@/app/_components/social-links'
-import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import React from 'react';
+import Container from '@/app/_components/container';
+import SocialLinks from '@/app/_components/social-links';
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const socialLinks = [
   {
@@ -19,7 +19,7 @@ const socialLinks = [
     svg: <FaWhatsapp />,
     label: 'Whatsapp Chat',
   },
-]
+];
 
 const Footer = () => {
   return (
@@ -56,7 +56,7 @@ const Footer = () => {
         </Container>
       </Container>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

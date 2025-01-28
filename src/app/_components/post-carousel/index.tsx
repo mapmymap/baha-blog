@@ -1,33 +1,33 @@
-'use client'
+'use client';
 
-import './style.css'
-import { PostMetadata } from '@/lib/posts'
-import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
-import ClassNames from 'embla-carousel-class-names'
-import Link from 'next/link'
+import './style.css';
+import { PostMetadata } from '@/lib/posts';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import ClassNames from 'embla-carousel-class-names';
+import Link from 'next/link';
 
 export default function PostCarousel({
   posts,
   style,
 }: {
-  posts: PostMetadata[]
-  style?: Record<string, string>
+  posts: PostMetadata[];
+  style?: Record<string, string>;
 }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, skipSnaps: false },
     [Autoplay({ delay: 6000 }), ClassNames()],
-  )
+  );
 
   const handleClick = (e: React.MouseEvent, index: number) => {
-    if (!emblaApi) return
+    if (!emblaApi) return;
 
-    const selectedSlide = emblaApi.slideNodes()[index]
+    const selectedSlide = emblaApi.slideNodes()[index];
     if (!selectedSlide.classList.contains('is-snapped')) {
-      e.preventDefault()
-      emblaApi.scrollTo(index)
+      e.preventDefault();
+      emblaApi.scrollTo(index);
     }
-  }
+  };
 
   return (
     <section className="embla" style={style} ref={emblaRef}>
@@ -60,5 +60,5 @@ export default function PostCarousel({
         ))}
       </div>
     </section>
-  )
+  );
 }

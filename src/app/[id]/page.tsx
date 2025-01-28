@@ -1,24 +1,24 @@
-import { notFound } from 'next/navigation'
-import { getPostData, getAllPosts } from '@/lib/posts'
+import { notFound } from 'next/navigation';
+import { getPostData, getAllPosts } from '@/lib/posts';
 
 type Params = {
   params: Promise<{
-    id: string
-  }>
-}
+    id: string;
+  }>;
+};
 
 export async function generateStaticParams() {
   return await Promise.all(
     getAllPosts().map(async (x) => await getPostData(x.id)),
-  )
+  );
 }
 
 export default async function Post(props: Params) {
-  const params = await props.params
-  const postData = await getPostData(params.id)
+  const params = await props.params;
+  const postData = await getPostData(params.id);
 
   if (!postData) {
-    return notFound()
+    return notFound();
   }
 
   return (
@@ -39,5 +39,5 @@ export default async function Post(props: Params) {
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </div>
-  )
+  );
 }

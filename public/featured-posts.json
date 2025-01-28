@@ -1,0 +1,45 @@
+[
+  {
+    "id": "kuari-pass-trek-via-dhak",
+    "title": "Kuari Pass Trek: A Journey Through the Garhwal Himalayas",
+    "date": "2024-12-15",
+    "author": "Amit",
+    "image": "https://raw.githubusercontent.com/mmaismma/baha-assets/refs/heads/main/images/trek/plan/kuaripassviadhak/kuaripassviadhak_detail3.png",
+    "accentColors": [
+      "#ffd3b6",
+      "#ffaaa5"
+    ]
+  },
+  {
+    "id": "monasteries-of-leh-via-phyang",
+    "title": "Leh's Iconic Monasteries: A Journey into Spiritual and Cultural Heritage",
+    "date": "2024-11-21",
+    "author": "Amit",
+    "image": "https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/monasteriesoflehviaphyang/monasteriesoflehviaphyang_detail5.png",
+    "accentColors": [
+      "#ffc8dd",
+      "#ffafcc"
+    ]
+  },
+  {
+    "id": "winter101",
+    "title": "Winter Trekking 101: What to Eat and How to Travel Safely",
+    "date": "2024-11-15",
+    "author": "Tushar",
+    "image": "https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/winter101/image2.jpg",
+    "accentColors": [
+      "#ffc8dd",
+      "#ffafcc"
+    ]
+  },
+  {
+    "id": "badrinath-dham-trek-via-badrinath",
+    "title": "Badrinath Dham: A Divine Journey to the Abode of Lord Vishnu",
+    "date": "2024-10-30",
+    "author": "Anon",
+    "accentColors": [
+      "#b5eead",
+      "#d7f9d1"
+    ]
+  }
+]

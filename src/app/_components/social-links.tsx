@@ -1,8 +1,8 @@
 type SocialLinkProps = {
-  href: string
-  svg: React.ReactNode
-  label: string
-}
+  href: string;
+  svg: React.ReactNode;
+  label: string;
+};
 
 const SocialLinks = ({ href, svg, label }: SocialLinkProps) => (
   <a
@@ -13,6 +13,6 @@ const SocialLinks = ({ href, svg, label }: SocialLinkProps) => (
     {svg}
     <span className="sr-only">{label}</span>
   </a>
-)
+);
 
-export default SocialLinks
+export default SocialLinks;

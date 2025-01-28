@@ -1,9 +1,9 @@
-import { getAllPosts } from '@/lib/posts'
-import SearchResults from './SearchResults'
-import { Suspense } from 'react'
+import { getAllPosts } from '@/lib/posts';
+import SearchResults from './SearchResults';
+import { Suspense } from 'react';
 
 export default function SearchPage() {
-  const allPosts = getAllPosts()
+  const allPosts = getAllPosts();
 
   return (
     <div className="p-3 max-w-7xl mx-auto">
@@ -14,5 +14,5 @@ export default function SearchPage() {
         </Suspense>
       </div>
     </div>
-  )
+  );
 }

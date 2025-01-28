@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
-import { PostMetadata } from '@/lib/posts'
-import PostCard from './PostCard'
+import Link from 'next/link';
+import { PostMetadata } from '@/lib/posts';
+import PostCard from './PostCard';
 
 export default function BlogList({ posts }: { posts: PostMetadata[] }) {
   return (
@@ -28,5 +28,5 @@ export default function BlogList({ posts }: { posts: PostMetadata[] }) {
         </div>
       )}
     </>
-  )
+  );
 }

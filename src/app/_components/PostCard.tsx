@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { PostMetadata } from '@/lib/posts'
+import Image from 'next/image';
+import Link from 'next/link';
+import { PostMetadata } from '@/lib/posts';
 
 export default function PostCard({ post }: { post: PostMetadata }) {
   return (
@@ -47,5 +47,5 @@ export default function PostCard({ post }: { post: PostMetadata }) {
         </p>
       </div>
     </Link>
-  )
+  );
 }

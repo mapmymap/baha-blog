@@ -1,10 +1,10 @@
-import { getAllPosts } from '@/lib/posts'
-import BlogList from '@/app/_components/BlogList'
-import { Suspense } from 'react'
-import PostCarousel from '@/app/_components/post-carousel'
+import { getAllPosts } from '@/lib/posts';
+import BlogList from '@/app/_components/BlogList';
+import { Suspense } from 'react';
+import PostCarousel from '@/app/_components/post-carousel';
 
 export default function Page() {
-  const posts = getAllPosts()
+  const posts = getAllPosts();
 
   return (
     <>
@@ -19,5 +19,5 @@ export default function Page() {
         </Suspense>
       </div>
     </>
-  )
+  );
 }

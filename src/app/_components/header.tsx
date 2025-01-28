@@ -1,63 +1,63 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { useSearchParams, useRouter, usePathname } from 'next/navigation'
-import { MdSearch, MdClose } from 'react-icons/md'
-import { useEffect, useRef, useState } from 'react'
+import Link from 'next/link';
+import Image from 'next/image';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
+import { MdSearch, MdClose } from 'react-icons/md';
+import { useEffect, useRef, useState } from 'react';
 
 const Header = () => {
-  const router = useRouter()
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const [state, setState] = useState({
     searchboxOpen: false,
     searchboxValue: '',
     currentPage: '/',
-  })
+  });
 
   const refs = {
     search: useRef<HTMLDivElement>(null),
     input: useRef<HTMLInputElement>(null),
-  }
+  };
 
   useEffect(() => {
-    const query = searchParams.get('query')
-    if (query) setState((s) => ({ ...s, searchboxOpen: true }))
-  }, [searchParams])
+    const query = searchParams.get('query');
+    if (query) setState((s) => ({ ...s, searchboxOpen: true }));
+  }, [searchParams]);
 
   useEffect(() => {
-    if (!state.searchboxOpen) return
+    if (!state.searchboxOpen) return;
 
     const handleClickOutside = (e: MouseEvent) => {
       if (!refs.search.current?.contains(e.target as Node)) {
-        handleClose()
+        handleClose();
       }
-    }
+    };
 
-    const timer = setTimeout(() => refs.input.current?.focus(), 100)
-    document.addEventListener('mousedown', handleClickOutside)
+    const timer = setTimeout(() => refs.input.current?.focus(), 100);
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      clearTimeout(timer)
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [state.searchboxOpen])
+      clearTimeout(timer);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [state.searchboxOpen]);
 
   const handleSearch = (value: string) => {
     setState((s) => ({
       ...s,
       searchboxValue: value,
       currentPage: pathname !== '/search' ? pathname : s.currentPage,
-    }))
-    router.push(value ? `/search?query=${value}` : '/search')
-  }
+    }));
+    router.push(value ? `/search?query=${value}` : '/search');
+  };
 
   const handleClose = () => {
-    setState((s) => ({ ...s, searchboxOpen: false, searchboxValue: '' }))
-    if (pathname === '/search') router.push(state.currentPage)
-  }
+    setState((s) => ({ ...s, searchboxOpen: false, searchboxValue: '' }));
+    if (pathname === '/search') router.push(state.currentPage);
+  };
 
   return (
     <nav
@@ -108,8 +108,8 @@ const Header = () => {
 
       <button
         onClick={() => {
-          setState((s) => ({ ...s, searchboxOpen: true }))
-          handleSearch('')
+          setState((s) => ({ ...s, searchboxOpen: true }));
+          handleSearch('');
         }}
         className={`m-2 flex items-center justify-center size-10 text-gray-600 rounded-full hover:bg-gray-200 focus:bg-gray-200
           ${state.searchboxOpen ? 'invisible opacity-0' : 'visible opacity-100'}`}
@@ -118,7 +118,7 @@ const Header = () => {
         <MdSearch size={24} />
       </button>
     </nav>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
