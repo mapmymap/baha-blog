@@ -12,6 +12,8 @@ of the lesser-trodden paths of the Indian Himalayas. For those seeking
 solace in nature or an adventure to rejuvenate their spirit, the Pindari
 Glacier Trek is a perfect choice.
 
+![Pindari Glacier](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/pindariglacierviakhati/pindariglacierviakhati_detail1.png)
+
 ## Why Choose the Pindari Glacier Trek?
 
 Often referred to as the "Soul of Kumaon," the Pindari Glacier is a vast
@@ -23,6 +25,7 @@ cultural heritage of the region. Here are some highlights:
 1.  **Diverse Landscapes:** From lush green meadows and dense oak
     forests to sparkling streams and quaint villages, the trek offers an
     ever-changing panorama of natural beauty.
+    ![Pindari Glacier](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/pindariglacierviakhati/pindariglacierviakhati_detail5.png)
 2.  **Cultural Immersion:** En route, you will encounter warm and
     hospitable locals, providing a glimpse into the vibrant Kumaoni
     culture and traditions.

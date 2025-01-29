@@ -4,6 +4,8 @@ date: '2024-05-12'
 author: 'Amit'
 ---
 
+![Roopkund](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/roopkundvialohajung/roopkundvialohajung_detail7.png)
+
 Nestled in the lap of the Garhwal Himalayas, the Roopkund Trek is a
 captivating journey that combines natural splendor, historical intrigue,
 and the thrill of adventure. Known as the “Mystery Lake Trek,” this
@@ -13,6 +15,8 @@ not just about reaching a destination; it's about embracing the journey,
 unraveling history, and experiencing the raw beauty of the mountains.
 
 ## The Allure of Roopkund
+
+![Roopkund](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/roopkundvialohajung/roopkundvialohajung_detail9.jpg)
 
 At an altitude of approximately 16,500 feet, Roopkund Lake lies amidst
 snow-capped peaks and rocky terrains. The skeletal remains, dating back

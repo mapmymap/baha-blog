@@ -12,6 +12,8 @@ travellers from around the world. With its spiritual aura and
 breathtaking natural beauty, a journey to Badrinath Dham is a
 soul-enriching experience.
 
+![Badrinath Dham](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/badrinathdhamviabadrinath/badrinathdhamviabadrinath_detail13.jpg)
+
 ## Historical and Mythological Significance
 
 Badrinath Dham, dedicated to Lord Vishnu, is steeped in mythology and
@@ -22,6 +24,8 @@ form of a Badri tree to protect him from the elements, hence the name
 era, with Adi Shankaracharya reviving its prominence in the 8th century.
 
 ## Architectural Marvel
+
+![Badrinath Dham](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/badrinathdhamviabadrinath/badrinathdhamviabadrinath_detail3.png)
 
 The temple’s architecture is an elegant blend of traditional North
 Indian design and modern craftsmanship. Positioned at an altitude of
@@ -35,6 +39,7 @@ posture, flanked by other deities.
 1.  **Tapt Kund:** Before entering the temple, devotees take a holy dip
     in the natural hot water spring known as Tapt Kund. The spring is
     believed to have healing properties.
+    ![Badrinath Dham](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/badrinathdhamviabadrinath/badrinathdhamviabadrinath_detail4.png)
 2.  **Brahma Kapal:** This ghat on the banks of the Alaknanda River is a
     significant site for performing ancestral rites.
 3.  **Mana Village:** Just 3 kilometers from the temple, Mana is the
@@ -42,6 +47,7 @@ posture, flanked by other deities.
     culture and myths, including the famous Bhim Pul and Vyas Gufa.
 4.  **Neelkanth Peak:** The stunning backdrop of the snow-covered
     Neelkanth Peak enhances the divine atmosphere of Badrinath Dham.
+    ![Badrinath Dham](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/badrinathdhamviabadrinath/badrinathdhamviabadrinath_detail2.png)
 
 ## Best Time to Visit
 

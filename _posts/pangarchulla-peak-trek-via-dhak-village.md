@@ -4,6 +4,8 @@ date: '2024-06-18'
 author: 'Chandrashekhar'
 ---
 
+![Pangarchulla Peak](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/pangarchullapeakviadhakvillage/pangarchullapeakviadhakvillage_detail6.png)
+
 Nestled in the pristine landscapes of Uttarakhand, the Pangarchulla Peak
 Trek is a thrilling journey that combines the raw beauty of the
 Himalayas with an adventurous ascent to a summit. Standing tall at an
@@ -22,15 +24,13 @@ why this trek stands out:
 1.  **Summit Experience:** Unlike many Himalayan treks that culminate in
     a pass or meadow, Pangarchulla rewards trekkers with a true summit
     experience.
-
 2.  **Panoramic Views:** From the peak, one can witness majestic views
     of Nanda Devi, Hathi Ghoda Parvat, Dronagiri, and other towering
     Himalayan giants.
-
 3.  **Seasonal Appeal:** The trek transforms with the seasons, offering
     lush greenery in summer and a snow-clad wonderland in winter and
     early spring.
-
+    ![Pangarchulla Peak](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/pangarchullapeakviadhakvillage/pangarchullapeakviadhakvillage_detail3.png)
 4.  **Challenging Yet Accessible:** While the trek demands physical
     fitness and determination, it is achievable with proper preparation
     and guidance.
@@ -38,13 +38,9 @@ why this trek stands out:
 ## Trek Overview
 
 - **Duration:** 6-8 days, depending on the itinerary
-
 - **Best Time to Visit:** April to June and September to November
-
 - **Starting Point:** Joshimath
-
 - **Maximum Altitude:** 4,590 meters (15,060 feet)
-
 - **Difficulty Level:** Moderate to challenging
 
 ## Detailed Itinerary
@@ -95,16 +91,12 @@ onward destination.
 
 1.  **Fitness First:** Engage in cardio and strength training to prepare
     for the challenging terrain and altitude.
-
 2.  **Layer Up:** Pack warm layers, a windproof jacket, and thermal
     innerwear for cold conditions.
-
 3.  **Trekking Gear:** Invest in sturdy trekking shoes, trekking poles,
     and a high-quality backpack.
-
 4.  **Essentials:** Carry a first-aid kit, sunscreen, sunglasses, and
     reusable water bottles.
-
 5.  **Guides and Porters:** Consider hiring a guide or joining a
     trekking group for a safer and more enjoyable experience.
 
@@ -112,10 +104,8 @@ onward destination.
 
 - **Leave No Trace:** Carry back all waste and minimize your
   ecological footprint.
-
 - **Respect Locals:** Engage with local communities with respect and
   support local businesses.
-
 - **Follow Guidelines:** Adhere to the instructions of your guide and
   stay on marked trails.
 
