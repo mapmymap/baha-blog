@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // basePath: '/sample-blog', // TODO: remove this
   output: 'export',
   images: {
     unoptimized: true,
@@ -9,6 +8,6 @@ const nextConfig = {
   experimental: {
     webpackMemoryOptimizations: true,
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

@@ -24,7 +24,7 @@ export default function RootLayout({
         <Suspense>
           <Header />
         </Suspense>
-        <div className="min-h-screen">{children}</div>
+        <div className="contents min-h-screen">{children}</div>
         <Footer />
       </body>
     </html>

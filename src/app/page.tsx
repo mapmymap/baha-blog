@@ -13,7 +13,7 @@ export default function Page() {
         style={{ height: '70vh', maxHeight: '800px' }}
       />
       <div className="p-3 max-w-7xl mx-auto">
-        <h1 className="mb-6 text-3xl font-bold">All blogs</h1>
+        <h1 className="mb-6 text-3xl font-bold">Recent blogs</h1>
         <Suspense>
           <BlogList posts={posts} />
         </Suspense>
