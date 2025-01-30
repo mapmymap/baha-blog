@@ -4,6 +4,8 @@ date: '2024-04-25'
 author: 'Chandrashekhar'
 ---
 
+![Dayara Bugyal](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/dayarabugyalviaraithal/dayarabugyalviaraithal_detail6.jpg)
+
 The Dayara Bugyal Trek is a delightful blend of natural splendor and
 adventure, offering panoramic views of snow-capped peaks, verdant
 meadows, and dense forests. Located in the Uttarkashi district of
@@ -23,6 +25,7 @@ trekkers alike, promising a mesmerizing journey through the Himalayas.
     during the spring and summer months.
 4.  **Winter Wonderland:** During winter, the meadows are blanketed in
     snow, transforming the region into a serene white paradise.
+    ![Dayara Bugyal](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/dayarabugyalviaraithal/dayarabugyalviaraithal_detail2.png)
 
 ## Trek Overview
 

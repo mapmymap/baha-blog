@@ -10,6 +10,8 @@ biodiversity, and cultural significance, this trek is a perfect blend of
 adventure and spirituality. Whether you’re an experienced trekker or a
 nature enthusiast, this trek promises an unforgettable experience.
 
+![Chopta](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/choptachandrashilaviasari/choptachandrashilaviasari_detail1.png)
+
 ## Overview of the Trek
 
 The trek typically starts from the picturesque village of Chopta, often
@@ -66,11 +68,13 @@ including Nanda Devi, Trishul, Kedarnath, and Chaukhamba.
 
 - **Tungnath Temple:** This over-1,000-year-old temple is an
   architectural marvel and a significant spiritual site.
+  ![Chopta](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/choptachandrashilaviasari/choptachandrashilaviasari_detail3.png)
 - **Chandrashila Peak:** The summit offers an unparalleled view of
   Himalayan giants, making it a photographer’s paradise.
 - **Flora and Fauna:** The region is part of the Kedarnath Wildlife
   Sanctuary, home to diverse wildlife including musk deer, monals, and
   foxes.
+  ![Chopta](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/choptachandrashilaviasari/choptachandrashilaviasari_detail8.png)
 - **Meadows of Chopta:** The rolling meadows are perfect for camping
   and enjoying the tranquility of nature.
 
