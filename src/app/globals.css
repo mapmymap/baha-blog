@@ -2,18 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
 :root {
   --easing-standard: cubic-bezier(0.2, 0, 0, 1);
   --easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
   --easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
 
-  --easing-duration-medium1: 50ms;
-  --easing-duration-medium2: 100ms;
-  --easing-duration-medium3: 150ms;
-  --easing-duration-medium4: 200ms;
+    --easing-duration-short1: 50ms;
+    --easing-duration-short2: 100ms;
+    --easing-duration-short3: 150ms;
+    --easing-duration-short4: 200ms;
 
   --easing-duration-medium1: 250ms;
   --easing-duration-medium2: 300ms;
   --easing-duration-medium3: 350ms;
   --easing-duration-medium4: 400ms;
+  }
 }
