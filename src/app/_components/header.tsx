@@ -94,71 +94,72 @@ const Header = () => {
 
   return (
     <nav
-      className={`flex items-end justify-between fixed top-0 left-0 right-0 z-50 p-4 lg:px-8
-      h-[var(--header-height)] backdrop-blur-lg border-b
+      className={`fixed top-0 left-0 right-0 z-50 h-[var(--header-height)] backdrop-blur-lg border-b
       transition-colors duration-[var(--easing-duration-short3)] ease-[var(--easing-standard)]
       ${state.isScrolled ? 'bg-[#F7F6F5]/80 border-gray-300/80' : 'bg-transparent border-transparent'}
       ${state.searchboxOpen ? 'shadow-md' : 'shadow-none'}
       `}
     >
-      <h2
-        className={`h-full transition-opacity duration-300 ${state.searchboxOpen ? 'opacity-0' : 'opacity-100'}`}
-      >
-        <Link
-          href="/"
-          className="h-full flex items-end gap-3 text-2xl font-smallcaps font-semibold tracking-wider"
+      <div className="max-w-7xl mx-auto h-full p-4 lg:px-8 flex items-end justify-between">
+        <h2
+          className={`h-full transition-opacity duration-300 ${state.searchboxOpen ? 'opacity-0' : 'opacity-100'}`}
         >
-          <Image
-            src="./assets/logo.png"
-            alt="Baha Travels logo"
-            height={50}
-            width={50}
-            className="h-full w-auto object-contain"
-            placeholder="empty"
-          />
-          <span>/ Blog</span>
-        </Link>
-      </h2>
+          <Link
+            href="/"
+            className="h-full flex items-end gap-3 text-2xl font-smallcaps font-semibold tracking-wider"
+          >
+            <Image
+              src="./assets/logo.png"
+              alt="Baha Travels logo"
+              height={50}
+              width={50}
+              className="h-full w-auto object-contain"
+              placeholder="empty"
+            />
+            <span>/ Blog</span>
+          </Link>
+        </h2>
 
-      <div
-        ref={refs.search}
-        className={`
-          absolute inset-0 p-4 lg:px-8
-          flex items-center justify-center
-          transition-all duration-300 ease-[var(--easing-standard)]
-          origin-[calc(100%-54px)_center]
-          ${state.searchboxOpen ? 'visible scale-100 opacity-100' : 'invisible scale-50 opacity-0'}
-        `.trim()}
-      >
-        <input
-          ref={refs.input}
-          type="search"
-          value={state.searchboxValue}
-          onChange={(e) => handleSearch(e.target.value)}
-          placeholder="Search blogs..."
-          className="w-full h-full bg-transparent border-none text-lg 
-            placeholder:text-gray-500 focus:outline-none focus:ring-0"
-          aria-label="Search blogs"
-        />
-        <button
-          onClick={closeSearchBox}
-          className="m-2 flex items-center justify-center size-10 rounded-full hover:bg-gray-200 focus:bg-gray-200"
+        <div
+          ref={refs.search}
+          className={`
+            absolute inset-0 p-4 lg:px-8
+            flex items-center justify-center
+            transition-all duration-300 ease-[var(--easing-standard)]
+            origin-[calc(100%-54px)_center]
+            ${state.searchboxOpen ? 'visible scale-100 opacity-100' : 'invisible scale-50 opacity-0'}
+          `.trim()}
         >
-          <MdClose size={24} />
+          <input
+            ref={refs.input}
+            type="search"
+            value={state.searchboxValue}
+            onChange={(e) => handleSearch(e.target.value)}
+            placeholder="Search blogs..."
+            className="w-full h-full bg-transparent border-none text-lg 
+              placeholder:text-gray-500 focus:outline-none focus:ring-0"
+            aria-label="Search blogs"
+          />
+          <button
+            onClick={closeSearchBox}
+            className="m-2 flex items-center justify-center size-10 rounded-full hover:bg-gray-200 focus:bg-gray-200"
+          >
+            <MdClose size={24} />
+          </button>
+        </div>
+
+        <button
+          onClick={() => {
+            setState((s) => ({ ...s, searchboxOpen: true }));
+            handleSearch('');
+          }}
+          className={`flex items-center justify-center h-full w-10 max-h-10 rounded-full hover:bg-gray-200 focus:bg-gray-200
+            ${state.searchboxOpen ? 'invisible opacity-0' : 'visible opacity-100'}`}
+          aria-label="Search"
+        >
+          <MdSearch size={24} />
         </button>
       </div>
-
-      <button
-        onClick={() => {
-          setState((s) => ({ ...s, searchboxOpen: true }));
-          handleSearch('');
-        }}
-        className={`flex items-center justify-center h-full w-10 max-h-10 rounded-full hover:bg-gray-200 focus:bg-gray-200
-          ${state.searchboxOpen ? 'invisible opacity-0' : 'visible opacity-100'}`}
-        aria-label="Search"
-      >
-        <MdSearch size={24} />
-      </button>
     </nav>
   );
 };
