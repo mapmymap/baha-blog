@@ -22,25 +22,32 @@ const Header = () => {
     input: useRef<HTMLInputElement>(null),
   };
 
+  // Handle initial search query
   useEffect(() => {
     const query = searchParams.get('query');
-    if (query) setState((s) => ({ ...s, searchboxOpen: true }));
+    if (query)
+      setState((s) => ({
+        ...s,
+        searchboxOpen: true,
+        searchboxValue: query,
+      }));
   }, [searchParams]);
 
+  // Handle click outside search box
   useEffect(() => {
     if (!state.searchboxOpen) return;
 
     const handleClickOutside = (e: MouseEvent) => {
       if (!refs.search.current?.contains(e.target as Node)) {
-        handleClose();
+        closeSearchBox();
       }
     };
 
-    const timer = setTimeout(() => refs.input.current?.focus(), 100);
+    const focusTimer = setTimeout(() => refs.input.current?.focus(), 50);
     document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(focusTimer);
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [state.searchboxOpen]);
@@ -54,8 +61,12 @@ const Header = () => {
     router.push(value ? `/search?query=${value}` : '/search');
   };
 
-  const handleClose = () => {
-    setState((s) => ({ ...s, searchboxOpen: false, searchboxValue: '' }));
+  const closeSearchBox = () => {
+    setState((s) => ({
+      ...s,
+      searchboxOpen: false,
+      searchboxValue: '',
+    }));
     if (pathname === '/search') router.push(state.currentPage);
   };
 
@@ -92,15 +103,17 @@ const Header = () => {
       >
         <input
           ref={refs.input}
+          type="search"
           value={state.searchboxValue}
           onChange={(e) => handleSearch(e.target.value)}
           placeholder="Search blogs..."
           className="w-full h-full bg-transparent border-none text-lg 
             placeholder:text-gray-500 focus:outline-none focus:ring-0"
+          aria-label="Search blogs"
         />
         <button
-          onClick={handleClose}
-          className="m-2 flex items-center justify-center size-10 text-gray-600 rounded-full hover:bg-gray-200 focus:bg-gray-200"
+          onClick={closeSearchBox}
+          className="m-2 flex items-center justify-center size-10 rounded-full hover:bg-gray-200 focus:bg-gray-200"
         >
           <MdClose size={24} />
         </button>
