@@ -15,6 +15,7 @@ const Header = () => {
     searchboxOpen: false,
     searchboxValue: '',
     currentPage: '/',
+    isScrolled: false,
   });
 
   const refs = {
@@ -52,6 +53,27 @@ const Header = () => {
     };
   }, [state.searchboxOpen]);
 
+  // Handle scroll effects
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setState((s) => ({
+        ...s,
+        isScrolled: scrollY > 10,
+      }));
+
+      requestAnimationFrame(() => {
+        document.documentElement.style.setProperty(
+          '--header-height',
+          `max(var(--header-height-min), calc(var(--header-height-max) - ${scrollY * 0.2}px))`,
+        );
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleSearch = (value: string) => {
     setState((s) => ({
       ...s,
@@ -72,34 +94,41 @@ const Header = () => {
 
   return (
     <nav
-      className={`flex items-center justify-between sticky top-0 z-50 p-4 lg:px-8 
-      bg-[#F7F6F5]/80 backdrop-blur-lg mb-4 transition-shadow duration-300
-      ${state.searchboxOpen ? 'shadow-md' : 'shadow-none'}`}
+      className={`flex items-end justify-between fixed top-0 left-0 right-0 z-50 p-4 lg:px-8
+      h-[var(--header-height)] backdrop-blur-lg border-b
+      transition-colors duration-[var(--easing-duration-short3)] ease-[var(--easing-standard)]
+      ${state.isScrolled ? 'bg-[#F7F6F5]/80 border-gray-300/80' : 'bg-transparent border-transparent'}
+      ${state.searchboxOpen ? 'shadow-md' : 'shadow-none'}
+      `}
     >
       <h2
-        className={`transition-opacity duration-300 ${state.searchboxOpen ? 'opacity-0' : 'opacity-100'}`}
+        className={`h-full transition-opacity duration-300 ${state.searchboxOpen ? 'opacity-0' : 'opacity-100'}`}
       >
         <Link
           href="/"
-          className="flex items-end gap-4 text-2xl font-smallcaps font-semibold tracking-wider text-[#45433d]"
+          className="h-full flex items-end gap-3 text-2xl font-smallcaps font-semibold tracking-wider"
         >
           <Image
             src="./assets/logo.png"
-            alt="logo"
-            width={50}
+            alt="Baha Travels logo"
             height={50}
-            className="filter dark:drop-shadow-lg"
+            width={50}
+            className="h-full w-auto object-contain"
             placeholder="empty"
           />
-          | Blog
+          <span>/ Blog</span>
         </Link>
       </h2>
 
       <div
         ref={refs.search}
-        className={`absolute inset-0 p-4 lg:px-8 flex items-center justify-center
-          transition-all duration-300 ease-out origin-[calc(100%-54px)_center]
-          ${state.searchboxOpen ? 'visible scale-100 opacity-100' : 'invisible scale-50 opacity-0'}`}
+        className={`
+          absolute inset-0 p-4 lg:px-8
+          flex items-center justify-center
+          transition-all duration-300 ease-[var(--easing-standard)]
+          origin-[calc(100%-54px)_center]
+          ${state.searchboxOpen ? 'visible scale-100 opacity-100' : 'invisible scale-50 opacity-0'}
+        `.trim()}
       >
         <input
           ref={refs.input}
@@ -124,7 +153,7 @@ const Header = () => {
           setState((s) => ({ ...s, searchboxOpen: true }));
           handleSearch('');
         }}
-        className={`m-2 flex items-center justify-center size-10 text-gray-600 rounded-full hover:bg-gray-200 focus:bg-gray-200
+        className={`flex items-center justify-center h-full w-10 max-h-10 rounded-full hover:bg-gray-200 focus:bg-gray-200
           ${state.searchboxOpen ? 'invisible opacity-0' : 'visible opacity-100'}`}
         aria-label="Search"
       >
