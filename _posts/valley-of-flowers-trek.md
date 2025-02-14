@@ -2,6 +2,11 @@
 title: 'Valley of Flowers Trek 2025'
 date: '2025-02-15'
 author: 'Amit Kumar Maurya'
+socialLinks:
+  - name: 'Instagram'
+    url: 'https://instagram.com/justdoitamit'
+  - name: 'Facebook'
+    url: 'https://facebook.com/amit.k.maurya.5'
 ---
 
 ![Flower valley](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/valleyofflowersviagovindghat/valleyofflowersviagovindghat_detail5.jpg)

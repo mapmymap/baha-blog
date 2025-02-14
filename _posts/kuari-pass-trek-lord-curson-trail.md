@@ -2,6 +2,11 @@
 title: 'Kuari Pass Trek: A Journey Through the Garhwal Himalayas'
 date: '2025-02-07'
 author: 'Amit Kumar Maurya'
+socialLinks:
+  - name: 'Instagram'
+    url: 'https://instagram.com/justdoitamit'
+  - name: 'Facebook'
+    url: 'https://facebook.com/amit.k.maurya.5'
 ---
 
 ![Kuari Pass Trek](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/kuaripassviadhak/kuaripassviadhak_detail3.png)

@@ -1,7 +1,12 @@
 ---
 title: 'Journey to the Mystical Roopkund: A Trek Through Time and Terrain'
 date: '2024-05-12'
-author: 'Amit'
+author: 'Amit Kumar Maurya'
+socialLinks:
+  - name: 'Instagram'
+    url: 'https://instagram.com/justdoitamit'
+  - name: 'Facebook'
+    url: 'https://facebook.com/amit.k.maurya.5'
 ---
 
 ![Roopkund](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/plan/roopkundvialohajung/roopkundvialohajung_detail7.png)
