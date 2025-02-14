@@ -5,7 +5,7 @@ import './globals.css';
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {
-  title: 'Baha',
+  title: 'Baha Blog',
   description: 'Your travel companion',
 };
 

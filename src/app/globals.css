@@ -30,6 +30,6 @@
 
   body {
     padding-top: var(--header-height);
-    color: #45433d;
+    color: #333;
   }
 }
