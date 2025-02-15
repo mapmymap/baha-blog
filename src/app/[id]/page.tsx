@@ -1,5 +1,21 @@
 import { notFound } from 'next/navigation';
 import { getPostData, getAllPosts } from '@/lib/posts';
+import SocialLinks from '@/app/_components/social-links';
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+  FaFacebook,
+  FaTwitter,
+} from 'react-icons/fa';
+
+const socialIcons: { [key: string]: React.ReactNode } = {
+  instagram: <FaInstagram />,
+  linkedin: <FaLinkedin />,
+  whatsapp: <FaWhatsapp />,
+  facebook: <FaFacebook />,
+  twitter: <FaTwitter />,
+};
 
 type Params = {
   params: Promise<{
@@ -34,6 +50,23 @@ export default async function Post(props: Params) {
             {postData.date}
           </time>
         </div>
+        {postData.socialLinks && (
+          <div className="flex items-center mt-4 -ms-5">
+            {postData.socialLinks.map(
+              (link: { name: string; url: string }, index: number) => {
+                const iconKey = link.name.toLowerCase();
+                return (
+                  <SocialLinks
+                    key={index}
+                    href={link.url}
+                    svg={socialIcons[iconKey] || null}
+                    label={link.name}
+                  />
+                );
+              },
+            )}
+          </div>
+        )}
       </header>
       <article className="prose prose-gray max-w-none px-4 pb-16">
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
