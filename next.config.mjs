@@ -6,7 +6,7 @@ const nextConfig = {
     domains: ['raw.githubusercontent.com'],
   },
   experimental: {
-    webpackMemoryOptimizations: true,
+    // webpackMemoryOptimizations: true,
   },
 };
 
