@@ -10,7 +10,7 @@ const SocialLinks = ({ href, svg, label }: SocialLinkProps) => (
     target="_blank"
     className="text-brand hover:text-gray-800 ms-5"
   >
-    {svg}
+    {svg ?? `[ ${label} ]`}
     <span className="sr-only">{label}</span>
   </a>
 );
