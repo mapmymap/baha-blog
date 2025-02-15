@@ -100,9 +100,61 @@ export function getAllPosts(): PostMetadata[] {
   });
 }
 
-export function getFeaturedPosts(): PostMetadata[] {
+interface Trek {
+  trek_id: string;
+  ideal_month?: string[];
+}
+
+export async function getFeaturedPosts(): Promise<PostMetadata[]> {
+  const MAX_FEATURED = 4;
   const allPosts = getAllPosts();
-  return allPosts.slice(0, 4);
+
+  const methods = {
+    // Dynamically fetch upcoming season's treks
+    treksInMonths: async (months: string[]): Promise<PostMetadata[]> => {
+      const API_URL = 'https://api.baha.co.in/api/v1/trek/getalltreks';
+      const postIds = new Set(allPosts.map((post) => post.id));
+
+      const res = await fetch(API_URL);
+      if (!res.ok) throw new Error(`Request to API server failed: ${res.body}`);
+
+      const data = await res.json();
+      const featuredTreks = data.treks
+        .filter(
+          (trek: Trek) =>
+            postIds.has(trek.trek_id) &&
+            months.some((month) => trek.ideal_month?.includes(month)),
+        )
+        .slice(0, MAX_FEATURED)
+        .map((trek: Trek) => allPosts.find((post) => post.id === trek.trek_id));
+
+      if (!featuredTreks.length) throw new Error('No trek found');
+
+      return featuredTreks;
+    },
+
+    // Latest posts
+    latestPosts: (): PostMetadata[] => {
+      return allPosts.slice(0, MAX_FEATURED);
+    },
+
+    // Hardcoded entries
+    hardcodedEntries: (ids: string[]): PostMetadata[] => {
+      return allPosts.filter((post) => ids.includes(post.id));
+    },
+  };
+
+  /* Strategy:
+   * 1. Try fetching next season's treks
+   * 2. Fallback to latest posts
+   * */
+
+  try {
+    return await methods.treksInMonths(['Mar', 'Apr']);
+  } catch (err) {
+    console.log("Failed to dynamically fetch upcoming season's trek");
+    return methods.latestPosts();
+  }
 }
 
 export async function getPostData(id: any): Promise<any> {
