@@ -1,7 +1,7 @@
 ---
-title: 'Kuari Pass Trek: A Journey Through the Garhwal Himalayas'
+title: 'Breaking Personal Records at Kuari Pass: A Journey of Endurance and Adventure'
 date: '2024-12-15'
-author: 'Amit'
+author: 'Prajakta Kinalekar'
 ---
 
 ![Kuari Pass](https://raw.githubusercontent.com/mmaismma/baha-assets/refs/heads/main/images/trek/plan/kuaripassviadhak/kuaripassviadhak_detail3.png)
