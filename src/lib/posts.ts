@@ -150,7 +150,16 @@ export async function getFeaturedPosts(): Promise<PostMetadata[]> {
    * */
 
   try {
-    return await methods.treksInMonths(['Mar', 'Apr']);
+    // prettier-ignore
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const thisMonth = new Date().getMonth();
+    // Upcoming season = next two months
+    const upcomingSeason = months.slice(
+      (thisMonth + 1) % 12,
+      (thisMonth + 3) % 12,
+    );
+
+    return await methods.treksInMonths(upcomingSeason);
   } catch (err) {
     console.log("Failed to dynamically fetch upcoming season's trek");
     return methods.latestPosts();
