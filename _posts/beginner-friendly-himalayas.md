@@ -6,7 +6,7 @@ author: 'Tushar Saklecha'
 
 Trekking in the Himalayas is a dream for many outdoor enthusiasts, but it doesn’t always require extreme endurance or technical skills. There are plenty of beginner-friendly treks that offer breathtaking scenery, cultural encounters, and rewarding experiences. Whether you’re stepping into trekking for the first time or seeking a moderate adventure, these 10 Himalayan treks are perfect for you.
 
-![Himalayas][https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas1.jpeg]
+![Himalayas](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas1.jpeg)
 
 ## **Why Trek in the Himalayas?**
 
@@ -40,7 +40,7 @@ Hampta Pass offers a dynamic blend of landscapes, transitioning from the lush Ku
 
 More Info: [Hampta Pass Trek](https://baha.co.in/trek-planner/hampta-pass-trek-via-jobra)
 
-![Himalayas][https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas2.jpeg]
+![Himalayas](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas2.jpeg)
 
 ---
 
@@ -52,7 +52,7 @@ A favorite among winter trekkers, Kedarkantha offers mesmerizing snow trails and
 
 More Info: [Kedarkantha Trek](https://baha.co.in/trek-planner/kedarkantha-peak-trek-via-sankri)
 
-![Himalayas][https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas3.jpeg]
+![Himalayas](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas3.jpeg)
 
 ---
 
@@ -64,7 +64,7 @@ Known as the “Trekker’s Wonderland,” Sandakphu is the only place in India 
 
 More Info: Sandakphu Trek
 
-![Himalayas][https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas4.jpeg]
+![Himalayas](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas4.jpeg)
 
 ---
 

@@ -6,7 +6,7 @@ author: 'Tushar Saklecha'
 
 In the heart of the mighty Himalayas lies Gangotri—a destination where natural grandeur, ancient mythology, and spiritual fervor converge. Far more than just a trekking route, Gangotri is revered as the birthplace of the sacred Ganges River, known locally as the Ganga. This pristine landscape, steeped in legend and tradition, draws pilgrims and adventurers alike who seek to experience its otherworldly beauty and deep-rooted cultural heritage. In this guide, we’ll delve into the historical, mythological, and practical aspects of trekking to Gangotri, offering you actionable tips to prepare for a journey that transcends the physical and touches the soul.
 
-![Gangotri][https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/gangotri1.jpeg]
+![Gangotri](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/gangotri1.jpeg)
 
 ---
 
@@ -39,7 +39,7 @@ Trekking to Gangotri is as much an exploration of nature as it is a pilgrimage. 
 - **Cultural Encounters:** Along the route, small hamlets and ancient shrines punctuate the journey, where local villagers continue age-old traditions.
 - **The Sacred Gangotri Glacier:** Near the end of the trek, you’ll witness the source of the Ganga—a pristine glacier that holds both natural wonder and spiritual significance.
 
-![Gangotri][https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/gangotri2.jpeg]
+![Gangotri](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/gangotri2.jpeg)
 
 For more detailed descriptions of the route, refer to REI’s Guide to High-Altitude Trekking.
 
