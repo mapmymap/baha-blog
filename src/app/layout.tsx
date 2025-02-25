@@ -1,7 +1,7 @@
-import Header from './_components/header';
+import Header from '@/app/_components/header';
 import Footer from '@/app/_components/footer';
 import type { Metadata } from 'next';
-import './globals.css';
+import '@/app/globals.css';
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {

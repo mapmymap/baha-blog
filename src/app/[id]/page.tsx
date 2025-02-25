@@ -56,30 +56,27 @@ export default async function Post(props: Params) {
   }
 
   return (
-    <article className="max-w-4xl mx-auto">
+    <article className="max-w-7xl mx-auto">
       <header className="py-12 px-4">
-        <h1
-          className="text-4xl font-bold text-gray-900 mb-4"
-          itemProp="headline"
-        >
+        <h1 className="text-4xl font-bold mb-4" itemProp="headline">
           {postData.title}
         </h1>
         <div className="flex items-center gap-2 text-sm text-gray-600">
-          <address className="font-medium" itemProp="author">
+          <address className="font-medium not-italic" itemProp="author">
             {postData.author}
           </address>
           <span>•</span>
           <time
             dateTime={postData.date}
             itemProp="datePublished"
-            className="text-gray-500"
+            className="text-gray-600"
           >
             {postData.date}
           </time>
         </div>
       </header>
       <div
-        className="prose prose-gray max-w-none px-4 pb-16"
+        className="prose prose-gray max-w-none px-4 pb-16 prose-img:mx-auto"
         itemProp="articleBody"
       >
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
