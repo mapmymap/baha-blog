@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { PostMetadata } from '@/lib/posts';
-import PostCard from './PostCard';
+import PostCard from './post_card';
 
 export default function BlogList({ posts }: { posts: PostMetadata[] }) {
   return (
