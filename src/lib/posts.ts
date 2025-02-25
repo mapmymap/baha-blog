@@ -9,6 +9,7 @@ export interface PostMetadata {
   title: string;
   date: string;
   author: string;
+  excerpt: string;
   socialLinks?: { name: string; url: string }[];
   image?: string;
   accentColors: string[];
@@ -25,6 +26,26 @@ function extractFirstImage(content: string): string | null {
   const imageRegex = /!\[.*?\]\((.*?)\)/;
   const match = content.match(imageRegex);
   return match ? match[1] : null;
+}
+
+function extractExcerpt(content: string): string {
+  const paragraphs = content.split('\n\n');
+
+  for (const paragraph of paragraphs) {
+    // Skip empty paragraphs
+    if (!paragraph.trim()) continue;
+
+    // Skip headings
+    if (paragraph.startsWith('#')) continue;
+
+    // Skip image markdown
+    if (paragraph.trim().startsWith('![')) continue;
+
+    // Return first valid paragraph
+    return paragraph.replaceAll('\n', ' ').trim();
+  }
+
+  return '';
 }
 
 const natureGradients = [
@@ -56,19 +77,37 @@ const getAccentColorsForTitle = (title: string) => {
 };
 
 function getPostMetadata(id: string): {
-  metadata: Record<string, string>;
+  metadata: {
+    title: string;
+    date: string;
+    author: string;
+    excerpt: string;
+    [key: string]: unknown;
+  };
   content: string;
 } {
   const fileContents = fs.readFileSync(
     path.join(postsDirectory, `${id}.md`),
     'utf8',
   );
+
   const matterResult = matter(fileContents);
-  const metadata = matterResult.data;
+
+  const metadata = matterResult.data as {
+    title: string;
+    date: string;
+    author: string;
+    excerpt: string;
+    image?: string;
+  };
 
   if (!metadata.image) {
     const firstImage = extractFirstImage(matterResult.content);
     if (firstImage) metadata.image = firstImage;
+  }
+
+  if (!metadata.excerpt) {
+    metadata.excerpt = extractExcerpt(matterResult.content);
   }
 
   return {

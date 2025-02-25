@@ -26,15 +26,15 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   return {
     title: post.title,
-    description: post.contentHtml,
+    description: post.excerpt,
     authors: [{ name: post.author }],
     openGraph: {
       type: 'article',
       url: 'blog.baha.co.in',
       title: post.title,
-      description: post.contentHtml,
+      description: post.excerpt,
       siteName: 'Baha Travels Blog',
-      images: [{ url: post.image }],
+      images: [{ url: post.image ?? '' }],
       publishedTime: post.date,
       authors: [post.author],
       locale: 'en_IN',
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: post.contentHtml,
+      description: post.excerpt,
     },
   };
 }
