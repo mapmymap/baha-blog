@@ -104,20 +104,24 @@ const Header = () => {
         <h2
           className={`h-full transition-opacity duration-300 ${state.searchboxOpen ? 'opacity-0' : 'opacity-100'}`}
         >
-          <Link
-            href="/"
-            className="h-full flex items-end gap-3 text-2xl font-smallcaps font-semibold tracking-wider"
-          >
-            <Image
-              src="./assets/logo.png"
-              alt="Baha Travels logo"
-              height={50}
-              width={50}
-              className="h-full w-auto object-contain"
-              placeholder="empty"
-            />
-            <span>/ Blog</span>
-          </Link>
+          <div className="h-full flex items-end gap-3 text-2xl font-smallcaps font-semibold tracking-wider">
+            <Link
+              href="//baha.co.in"
+              className="h-full flex items-end gap-3 text-2xl font-smallcaps font-semibold tracking-wider"
+            >
+              <Image
+                src="./assets/logo.png"
+                alt="Baha Travels logo"
+                height={50}
+                width={50}
+                className="h-full w-auto object-contain"
+                placeholder="empty"
+              />
+            </Link>
+            <Link href="/">
+              <span>/ Blog</span>
+            </Link>
+          </div>
         </h2>
 
         <div
