@@ -4,7 +4,7 @@ date: '2025-02-19'
 author: 'Tushar Saklecha'
 ---
 
-![Gangotri](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas13.jpeg)
+![Gangotri](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas13.png)
 
 Embarking on a multi-day trek through the Himalayas is more than just a journey; it's an odyssey that intertwines the raw beauty of nature with the indomitable spirit of adventure. The towering peaks, the whispering winds, and the serene trails beckon countless souls seeking both external and internal discovery. Yet, the success of such an expedition hinges not merely on enthusiasm but on meticulous preparation. Packing the right gear becomes the linchpin that ensures comfort, safety, and the overall enrichment of your trekking experience.
 

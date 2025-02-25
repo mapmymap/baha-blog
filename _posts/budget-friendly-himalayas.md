@@ -4,7 +4,7 @@ date: '2025-02-21'
 author: 'Tushar Saklecha'
 ---
 
-![Himalayas](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas12.jpeg)
+![Himalayas](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas12.png)
 
 Embarking on a Himalayan adventure doesn't have to break the bank. The Himalayas, with their majestic peaks and serene landscapes, offer numerous budget-friendly destinations perfect for backpackers seeking both adventure and affordability. Let's explore some of the top spots and tips to make your journey memorable without overspending.
 

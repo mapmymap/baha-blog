@@ -28,6 +28,8 @@ From ancient monasteries to traditional villages, trekking in the Himalayas imme
 
 Many Himalayan treks are well-marked and accessible for first-timers. These trails offer adventure without the physical demands of more advanced treks.
 
+![Himalayas](https://raw.githubusercontent.com/mapmymap/baha-assets/refs/heads/main/images/trek/himalayas/himalayas14.jpeg)
+
 ## **Top 10 Beginner-Friendly Himalayan Treks**
 
 Here are the top beginner-friendly treks that balance adventure, cultural exploration, and natural beauty.
