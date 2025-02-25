@@ -6,21 +6,17 @@ import html from 'remark-html';
 
 export interface PostMetadata {
   id: string;
-  title?: string;
-  date?: string;
+  title: string;
+  date: string;
+  author: string;
+  socialLinks?: { name: string; url: string }[];
   image?: string;
   accentColors: string[];
-  [key: string]: any; // Allow additional metadata fields
+  [key: string]: unknown; // Allow additional metadata fields
 }
 
-export interface PostData {
-  id: string;
-  title?: string;
-  date?: string;
-  image?: string;
-  accentColors: string[];
+export interface PostData extends PostMetadata {
   contentHtml: string;
-  [key: string]: any; // Allow additional metadata fields
 }
 
 const postsDirectory: string = path.join(process.cwd(), '/_posts');
@@ -43,7 +39,7 @@ const natureGradients = [
   ['#e9edc9', '#ccd5ae'], // sage and moss
 ];
 
-const hashString = (str: string) => {
+const hashString = (str: string): number => {
   let hash = 0;
 
   if (str.length)
@@ -105,11 +101,15 @@ export function getFeaturedPosts(): PostMetadata[] {
   return allPosts.slice(0, 4);
 }
 
-export async function getPostData(id: any): Promise<any> {
+export async function getPostData(id: string): Promise<PostData> {
   const { metadata, content } = getPostMetadata(id);
 
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
+
+  if (!metadata.title || !metadata.date) {
+    throw new Error(`Post ${id} is missing required metadata`);
+  }
 
   return {
     id,
