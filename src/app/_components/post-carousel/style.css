@@ -30,10 +30,13 @@
     border-radius var(--easing-duration-medium4)
       var(--easing-standard-decelerate),
     opacity var(--easing-duration-medium4) var(--easing-standard);
-}
 
-@media (max-width: 1250px) {
-  .embla__slide {
+  @media (max-width: 768px) {
+    margin: 0 4px;
+    box-shadow: 0 0 0 2px #9995 inset;
+  }
+
+  @media (max-width: 1024px) {
     padding: 20px;
   }
 }
