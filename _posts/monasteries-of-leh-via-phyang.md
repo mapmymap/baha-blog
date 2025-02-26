@@ -1,7 +1,12 @@
 ---
 title: "Leh's Iconic Monasteries: A Journey into Spiritual and Cultural Heritage"
 date: '2024-11-21'
-author: 'Amit'
+author: 'Amit Kumar Maurya'
+socialLinks:
+  - name: 'Instagram'
+    url: 'https://instagram.com/justdoitamit'
+  - name: 'Facebook'
+    url: 'https://facebook.com/amit.k.maurya.5'
 ---
 
 Nestled in the heart of the Himalayas, Leh stands as a beacon of

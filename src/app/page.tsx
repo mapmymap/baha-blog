@@ -1,15 +1,15 @@
-import { getAllPosts } from '@/lib/posts';
+import { getAllPosts, getFeaturedPosts } from '@/lib/posts';
 import BlogList from '@/app/_components/BlogList';
 import { Suspense } from 'react';
 import PostCarousel from '@/app/_components/post_carousel';
 
-export default function Page() {
+export default async function Page() {
   const posts = getAllPosts();
 
   return (
     <>
       <PostCarousel
-        posts={posts.slice(0, 4)}
+        posts={await getFeaturedPosts()}
         style={{ height: '70svh', maxHeight: '800px' }}
       />
       <div className="p-3 max-w-7xl mx-auto">

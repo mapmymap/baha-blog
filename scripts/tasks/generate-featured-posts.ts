@@ -5,7 +5,7 @@ import { getFeaturedPosts } from '@/lib/posts';
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 
 export default async function generateFeaturedPosts() {
-  const featuredPosts = getFeaturedPosts();
+  const featuredPosts = await getFeaturedPosts();
 
   if (!fs.existsSync(PUBLIC_DIR)) {
     fs.mkdirSync(PUBLIC_DIR, { recursive: true });
