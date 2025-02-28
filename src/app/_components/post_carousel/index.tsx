@@ -40,7 +40,7 @@ export default function PostCarousel({
             onClick={(e) => handleClick(e, index)}
             style={{
               background: `
-                linear-gradient(70deg, rgba(253,251,251,0.95) 0%, rgba(253,251,251,0.7) 45%, transparent 100%),
+                linear-gradient(70deg, rgba(253,251,251,0.85) 0%, rgba(253,251,251,0.6) 45%, transparent 100%),
                 url(${post.image}),
                 linear-gradient(10deg, ${post.accentColors[0]}, ${post.accentColors[1]})`,
               backgroundPosition: post.image ? 'right' : 'center',

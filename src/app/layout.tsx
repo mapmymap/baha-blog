@@ -1,11 +1,14 @@
-import Header from './_components/header';
+import Header from '@/app/_components/header';
 import Footer from '@/app/_components/footer';
 import type { Metadata } from 'next';
-import './globals.css';
+import '@/app/globals.css';
 import { Suspense } from 'react';
 
+import { Inter } from 'next/font/google';
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata: Metadata = {
-  title: 'Baha',
+  title: 'Baha Blog',
   description: 'Your travel companion',
 };
 
@@ -20,7 +23,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="./assets/favicon.ico" />
         <meta name="theme-color" content="#f68a1e" />
       </head>
-      <body>
+      <body className={inter.className}>
         <Suspense>
           <Header />
         </Suspense>

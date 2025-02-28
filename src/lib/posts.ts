@@ -6,21 +6,18 @@ import html from 'remark-html';
 
 export interface PostMetadata {
   id: string;
-  title?: string;
-  date?: string;
+  title: string;
+  date: string;
+  author: string;
+  excerpt: string;
+  socialLinks?: { name: string; url: string }[];
   image?: string;
   accentColors: string[];
-  [key: string]: any; // Allow additional metadata fields
+  [key: string]: unknown; // Allow additional metadata fields
 }
 
-export interface PostData {
-  id: string;
-  title?: string;
-  date?: string;
-  image?: string;
-  accentColors: string[];
+export interface PostData extends PostMetadata {
   contentHtml: string;
-  [key: string]: any; // Allow additional metadata fields
 }
 
 const postsDirectory: string = path.join(process.cwd(), '/_posts');
@@ -29,6 +26,26 @@ function extractFirstImage(content: string): string | null {
   const imageRegex = /!\[.*?\]\((.*?)\)/;
   const match = content.match(imageRegex);
   return match ? match[1] : null;
+}
+
+function extractExcerpt(content: string): string {
+  const paragraphs = content.split('\n\n');
+
+  for (const paragraph of paragraphs) {
+    // Skip empty paragraphs
+    if (!paragraph.trim()) continue;
+
+    // Skip headings
+    if (paragraph.startsWith('#')) continue;
+
+    // Skip image markdown
+    if (paragraph.trim().startsWith('![')) continue;
+
+    // Return first valid paragraph
+    return paragraph.replaceAll('\n', ' ').trim();
+  }
+
+  return '';
 }
 
 const natureGradients = [
@@ -43,7 +60,7 @@ const natureGradients = [
   ['#e9edc9', '#ccd5ae'], // sage and moss
 ];
 
-const hashString = (str: string) => {
+const hashString = (str: string): number => {
   let hash = 0;
 
   if (str.length)
@@ -60,19 +77,37 @@ const getAccentColorsForTitle = (title: string) => {
 };
 
 function getPostMetadata(id: string): {
-  metadata: Record<string, string>;
+  metadata: {
+    title: string;
+    date: string;
+    author: string;
+    excerpt: string;
+    [key: string]: unknown;
+  };
   content: string;
 } {
   const fileContents = fs.readFileSync(
     path.join(postsDirectory, `${id}.md`),
     'utf8',
   );
+
   const matterResult = matter(fileContents);
-  const metadata = matterResult.data;
+
+  const metadata = matterResult.data as {
+    title: string;
+    date: string;
+    author: string;
+    excerpt: string;
+    image?: string;
+  };
 
   if (!metadata.image) {
     const firstImage = extractFirstImage(matterResult.content);
     if (firstImage) metadata.image = firstImage;
+  }
+
+  if (!metadata.excerpt) {
+    metadata.excerpt = extractExcerpt(matterResult.content);
   }
 
   return {
@@ -166,11 +201,15 @@ export async function getFeaturedPosts(): Promise<PostMetadata[]> {
   }
 }
 
-export async function getPostData(id: any): Promise<any> {
+export async function getPostData(id: string): Promise<PostData> {
   const { metadata, content } = getPostMetadata(id);
 
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
+
+  if (!metadata.title || !metadata.date) {
+    throw new Error(`Post ${id} is missing required metadata`);
+  }
 
   return {
     id,
