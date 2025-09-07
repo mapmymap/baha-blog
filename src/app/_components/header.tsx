@@ -110,7 +110,7 @@ const Header = () => {
               className="h-full flex items-end gap-3 text-2xl font-smallcaps font-semibold tracking-wider"
             >
               <Image
-                src="./assets/logo.png"
+                src="/logo.png"
                 alt="leekir.com logo"
                 height={50}
                 width={50}
