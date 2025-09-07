@@ -30,7 +30,7 @@ const Footer = () => {
             <span className="text-bold text-gray-950 sm:text-center text-xs dark:text-gray-600">
               © 2024{' '}
               <a href="#" className="hover:underline">
-                Baha™
+                leekir.com, an entity of Baha Travels Pvt. Ltd.™
               </a>
               All Rights Reserved.
             </span>
