@@ -106,12 +106,12 @@ const Header = () => {
         >
           <div className="h-full flex items-end gap-3 text-2xl font-smallcaps font-semibold tracking-wider">
             <Link
-              href="//baha.co.in"
+              href="//leekir.com"
               className="h-full flex items-end gap-3 text-2xl font-smallcaps font-semibold tracking-wider"
             >
               <Image
                 src="./assets/logo.png"
-                alt="Baha Travels logo"
+                alt="leekir.com logo"
                 height={50}
                 width={50}
                 className="h-full w-auto object-contain"
